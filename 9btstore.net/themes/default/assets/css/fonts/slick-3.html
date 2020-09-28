@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" dir="rtl" lang="ar">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta name="theme-color" content="#37a495">
+<meta name="msapplication-navbutton-color" content="#37a495">
+<meta name="apple-mobile-web-app-status-bar-style" content="#37a495">
+<meta name="author" content="منصة سلة">
+<meta name="robots" content="noindex, follow">
+<meta name="copyright" content="Salla.sa">
+<link rel="icon" href="" type="image/png">
+<title>    نأسف، الرابط غير موجود
+</title>
+
+<link rel="icon" type="image/png" href="./assets/images/icons/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="./assets/images/icons/favicon.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="./assets/images/icons/favicon.png">
+
+
+<link href="https://9btstore.net/vendor/salla/errors/app.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="body body--rtl body--bg">
+
+<header id="header" class="header header--404"></header>
+<main id="main" class="main main--404">
+<div class="container container--wide">
+<div class="e404-container">
+<div class="landing">
+<h1 class="title title--giant title--404">
+<img src="https://9btstore.net/vendor/salla/errors/images/error.svg" alt="" /> 404
+</h1>
+<h3>نأسف، الرابط غير موجود</h3>
+<p>
+الرابط المطلوب غير موجود، <br>من فضلك حاول مرة آخرى أو تواصل مع الدعم الفني بسلة
+</p>
+<a href="/">الذهاب للصفحة الرئيسية</a>
+</div>
+<div class="msg">
+<form class="feedback-error row" action="https://sentry.salla.sa/api/embed/error-page/?dsn=https://152cef86271843f6b53454606c7aa9c0@s.salla.dev/2">
+<div class="col-md-6">
+<div class="form-group">
+<input class="form-control" required type="text" name="name" value="" placeholder="اسمك الكريم">
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<input class="form-control" required type="email" name="email" value="" placeholder="بريدك الالكتروني">
+</div>
+</div>
+<div class="col-md-12">
+<textarea class="form-control" required name="comments" placeholder="نص رسالتك هنا!"></textarea>
+</div>
+<div class="col-md-12">
+<div class="controls">
+<button id="btn-return" class="btn btn--circular btn--return">
+<svg enable-background="new 0 0 20 20" height="20px" version="1.1" viewBox="0 0 32 32" width="20px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M32,16.009c0-0.267-0.11-0.522-0.293-0.714  l-9.899-9.999c-0.391-0.395-1.024-0.394-1.414,0c-0.391,0.394-0.391,1.034,0,1.428l8.193,8.275H1c-0.552,0-1,0.452-1,1.01  s0.448,1.01,1,1.01h27.586l-8.192,8.275c-0.391,0.394-0.39,1.034,0,1.428c0.391,0.394,1.024,0.394,1.414,0l9.899-9.999  C31.894,16.534,31.997,16.274,32,16.009z" fill="#fff" fill-rule="evenodd" id="Arrow_Forward" />
+<g />
+<g />
+<g />
+<g />
+<g />
+<g /></svg>
+</button>
+<button id="btn-send" class="btn btn--large btn--round btn--primary">ارسال</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="form-group msg-container">
+</div>
+</div>
+</main>
+
+<footer id="footer" class="footer"></footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://9btstore.net/vendor/salla/app.js"></script>
+<script type="text/javascript" src="https://9btstore.net/vendor/salla/errors/app.js"></script>
+
+<script type="application/javascript">
+                $('#btn-return').on('click', function () {
+            Sentry.captureMessage('Error page with feedback');
+        });
+            </script>
+<script>
+    $(function() {
+        var status_code = "404";
+        Salla.event.createAndDispatch('error::error', {'status_code': status_code })
+    });
+</script>
+</body>
+</html>
